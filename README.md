@@ -1,3 +1,9 @@
+# Focus Time app
+
+Focus Time is a simple app created to learn the basic concepts for React Native development; This app is designed to help the user focus on their desired task using the Pomodoro technique, by providing the user with a counter and a set of operations to control the time designated to the assigend task he will be able to set an alarm on their mobile device and start focusing!
+
+Exported snack app created from Expo.
+
 # Sample Snack app
 
 Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!

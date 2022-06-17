@@ -3,33 +3,34 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { colors } from '../utils/Styles/colors';
 
 export const RoundedButton = ({
-  style = {},
-  textStyle = {},
-  size = 125,
-  ...props
+    style = {},
+    textStyle = {},
+    size = 125,
+    ...props
 }) => {
-  return (
-    <TouchableOpacity
-      style={[styles(size).radius, style]}
-      onPress={props.onPress}>
-      <Text style={[styles(size).text, textStyle]}>{props.title}</Text>
-    </TouchableOpacity>
-  );
+    return (
+        <TouchableOpacity
+            style={[styles(size).radius, style]}
+            onPress={props.onPress}
+        >
+            <Text style={[styles(size).text, textStyle]}>{props.title}</Text>
+        </TouchableOpacity>
+    );
 };
 
 const styles = (size) => ({
-  radius: {
-    borderRadius: size / 2,
-    width: size,
-    height: size,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderColor: colors.primaryDark,
-    borderWidth: 2,
-  },
-  text: {
-    color: colors.contrastDark,
-    fontSize: size / 3,
-    paddingBottom: 10,
-  },
+    radius: {
+        borderRadius: size / 2,
+        width: size,
+        height: size,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderColor: colors.primaryDark,
+        borderWidth: 2,
+    },
+    text: {
+        color: colors.contrastDark,
+        fontSize: size / 3,
+        paddingBottom: 10,
+    },
 });
