@@ -43,7 +43,7 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
                 />
                 <View style={styles.textWrapper}>
                     <Text style={styles.title}>Focusing on:</Text>
-                    <Text style={styles.subTitle}>{focusSubject}</Text>
+                    <Text style={styles.subTitle}>{focusSubject.text}</Text>
                 </View>
             </View>
             <View style={styles.progressWrapper}>
@@ -118,6 +118,6 @@ const styles = StyleSheet.create({
     },
     clearSubjectWrapper: {
         flexDirection: 'row',
-        justifyContent: 'end',
+        justifyContent: 'flex-end',
     },
 });

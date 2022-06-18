@@ -5,7 +5,7 @@ import { RoundedButton } from '../components/RoundedButton';
 import { spacing } from '../utils/Styles/sizes';
 
 export const Focus = ({ addSubject }) => {
-    const [subject, setSubject] = useState('');
+    const [subject, setSubject] = useState(null);
     return (
         <View style={styles.container}>
             <View style={styles.inputContainer}>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         padding: spacing.lg,
-        justifyContent: 'top',
+        justifyContent: 'center',
         flexDirection: 'row',
     },
     textInput: {

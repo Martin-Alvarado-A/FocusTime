@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Constants from 'expo-constants';
 import { colors } from './src/utils/Styles/colors';
-import { Focus } from './src/features/focus';
+import { Focus } from './src/features/Focus';
 import { Timer } from './src/features/Timer';
 import { FocusHistory } from './src/features/FocusHistory';
 
@@ -21,7 +21,13 @@ export default function App() {
         <SafeAreaView style={styles.container}>
             {!currentSubject ? (
                 <>
-                    <Focus addSubject={setCurrentSubject} />
+                    <Focus
+                        addSubject={(text) => {
+                            let id = history.length + 1;
+                            let task = { text, id };
+                            setCurrentSubject(task);
+                        }}
+                    />
                     <FocusHistory history={history} />
                 </>
             ) : (

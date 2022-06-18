@@ -14,7 +14,11 @@ export const FocusHistory = ({ history }) => {
             </View>
         );
 
-    const renderItem = ({ item }) => <Text style={styles.item}>- {item}</Text>;
+    const renderItem = ({ item }) => (
+        <Text key={item.id} style={styles.item}>
+            - {item.text}
+        </Text>
+    );
 
     return (
         <View style={styles.container}>
